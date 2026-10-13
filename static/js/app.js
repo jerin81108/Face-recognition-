@@ -376,6 +376,7 @@
       const stream = await navigator.mediaDevices.getUserMedia(constraints);
       state.cameraStream = stream;
       elements.webcamVideo.srcObject = stream;
+        elements.webcamVideo.classList.remove('hidden-element');
       await elements.webcamVideo.play();
 
       state.isCameraRunning = true;
